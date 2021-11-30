@@ -2,7 +2,7 @@ import express from "express";
 
 const app = express();
 
-app.use(express.static("public"))
+// app.use(express.static("public"))
 
 app.get("/", (request, response) => {
   response.send("<h1>A Simple WebService</h1>");
