@@ -2,6 +2,12 @@ import express from "express";
 
 const app = express();
 
+
+const options = {
+  year: 'numeric', month: 'numeric', day: 'numeric',
+  hour: 'numeric', minute: 'numeric', second: 'numeric',
+  hour12: false,
+};
 // app.use(express.static("public"))
 app.use(express.json());
 
@@ -10,10 +16,12 @@ app.get("/", (request, response) => {
 });
 
 app.get("/healthy", (request, response) => {
+  console.log(`request on ${request.route.path} at ${new Intl.DateTimeFormat('pt-BR', options).format(new Date())}`);
   response.json("I'm in good health");
 });
 
 app.get("/get", (request, response) => {
+  console.log(`request on ${request.route.path} at ${new Intl.DateTimeFormat('pt-BR', options).format(new Date())}`);
   const { route, query } = request;
   response.json({
     route,
@@ -22,6 +30,7 @@ app.get("/get", (request, response) => {
 });
 
 app.post("/post", (request, response) => {
+  console.log(`request on ${request.route.path} at ${new Intl.DateTimeFormat('pt-BR', options).format(new Date())}`);
   const { route, query, body } = request;
 
   response.json({
