@@ -1,6 +1,5 @@
 import server from "./src/server.js";
-const port = 3000;
 
-server.listen(port, () => {
+server.listen(process.env.PORT || 3000, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
