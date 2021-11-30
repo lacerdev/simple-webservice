@@ -1,0 +1,25 @@
+{
+  "name": "simple-webservice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lacerdev/simple-webservice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lacerdev/simple-webservice/issues"
+  },
+  "homepage": "https://github.com/lacerdev/simple-webservice#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
