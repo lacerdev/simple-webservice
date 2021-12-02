@@ -9,7 +9,7 @@ const options = {
   hour12: false,
   timeZone: "America/Sao_Paulo"
 };
-// app.use(express.static("public"))
+app.use(express.static("public"))
 app.use(express.json());
 
 app.get("/", (request, response) => {
